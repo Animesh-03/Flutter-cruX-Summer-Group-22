@@ -11,12 +11,16 @@ Native apps are those which are built for a specific platform and this means a d
 
 Flutter however solves this issue as it only requires a developer to code once yet it can build to many different platforms like Android, iOS and Windows. This also ensures uniformity across the various platforms the app is deployed to.
 
-Another advantage of Flutter over the standard frameworks which use HTML and CSS is that Flutter only uses "Dart" for everything it does. Dart is the language built specifically for flutter but it is very similar to other languages like Java and shares most of the syntax you use in C/C++ with some additional functions.
+Another advantage of Flutter over the standard frameworks which use HTML and CSS is that Flutter only uses "Dart" for everything it does. Dart is very similar to other languages like Java and shares most of the syntax you use in C/C++ with some additional functions.
+
+You can watch these for a bit more info on Flutter and Dart:
+1. <a href="https://www.youtube.com/watch?v=lHhRhPV--G0">Flutter in 100 seconds</a>
+2. <a href = "https://www.youtube.com/watch?v=NrO0CJCbYLA">Dart in 100 seconds</a>
 
 # Installation
 To get started with Flutter head on to https://docs.flutter.dev/get-started/install and follow the steps for your OS.
 
-<span style="color:orange">Make sure to follow every step sequentially and **pay heed to the warnings** to avoid errors</span>
+<span style="color:orange">Make sure to follow every step sequentially and **pay attention to the warnings** to avoid errors</span>
 
 Skip the "Set up Android Emulator" part for now as we will look at it later. However, follow the next steps in the web page.
 
@@ -26,8 +30,8 @@ We will be using VSCode throughout the summer group instead of Android Studio as
 
 To start using flutter in VSCode install the following extensions:
 
-1. https://marketplace.visualstudio.com/items?itemName=Dart-Code.flutter
-2. https://marketplace.visualstudio.com/items?itemName=Nash.awesome-flutter-snippets
+1. <a href="https://marketplace.visualstudio.com/items?itemName=Dart-Code.flutter">Flutter Extension</a>
+2. <a href="https://marketplace.visualstudio.com/items?itemName=Nash.awesome-flutter-snippets">Awesome Flutter Snippets </a>
 
 Awesome flutter snippets provide certain snippets which makes life easier. We will be mainly using it for building stateless and stateful Widgets in the course so search the shortcuts for them in its documentation.
 
