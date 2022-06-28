@@ -1,6 +1,12 @@
+---
+icon: gear
+order: 99
+---
+
 # **Installation And Introduction**
 
-# What is Flutter?
+## What is Flutter?
+
 Flutter is a multiplatform framework from Google used for building apps for web, mobile and desktop.
 
 What do I mean by multiplatform? It means one can build apps for a device regardless of the platform it is running on like Android, iOS, Windows, Linux etc.
@@ -14,10 +20,12 @@ Flutter however solves this issue as it only requires a developer to code once y
 Another advantage of Flutter over the standard frameworks which use HTML and CSS is that Flutter only uses "Dart" for everything it does. Dart is very similar to other languages like Java and shares most of the syntax you use in C/C++ with some additional functions.
 
 You can watch these for a bit more info on Flutter and Dart:
+
 1. <a href="https://www.youtube.com/watch?v=lHhRhPV--G0">Flutter in 100 seconds</a>
 2. <a href = "https://www.youtube.com/watch?v=NrO0CJCbYLA">Dart in 100 seconds</a>
 
-# Installation
+## Installation
+
 To get started with Flutter head on to https://docs.flutter.dev/get-started/install and follow the steps for your OS.
 
 <span style="color:orange">Make sure to follow every step sequentially and **pay attention to the warnings** to avoid errors</span>
@@ -35,15 +43,16 @@ To start using flutter in VSCode install the following extensions:
 
 Awesome flutter snippets provide certain snippets which makes life easier. We will be mainly using it for building stateless and stateful Widgets in the course so search the shortcuts for them in its documentation.
 
+## Dart
 
-# Dart
 There's just one more step before we actually get to building your first flutter project which is to understand the Dart language. You don't necessarily need to know every minute detail of dart or any new language for that matter to get started. You only need enough to roughly understand the objective of code that you see.
 
 A good starting point for learning dart: https://codelabs.developers.google.com/codelabs/from-java-to-dart/
 
 You can however complete additional codelabs if you want to, however it is not really necessary. https://dart.dev/codelabs
 
-# Building A Flutter App
+## Building A Flutter App
+
 The exciting part is finally here! Let's build our first app.
 
 Open up a terminal in VSCode and run the following command: `flutter create newsapp` You can change the name of the app to anything else you like but make sure to not have any capital letters in the name.
@@ -58,5 +67,6 @@ To use emulator: https://docs.flutter.dev/get-started/install/windows#set-up-the
 
 To run on physical device: https://medium.com/@ferilukmansyah/easy-way-to-setup-your-android-device-to-run-flutter-project-28bddf0fa7f1
 
-# Next Steps
+## Next Steps
+
 We will be starting the Flutter track with Week 1 in July. In the meanwhile, enthusiastic folks can try and decipher the code in lib/main.dart of the project you just created. Do not get discouraged even if you understood absolutely nothing! Learning a new framework is a daunting task by itself and pair it up with a new language and congratulations, you just entered hell for a week or two (Yes, it doesn't take too long to get comfortable with Flutter). I will begin Week 1 by explaining the code in main.dart before anything else. Stay Tuned!
