@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://animesh-03.github.io/Flutter-cruX-Summer-Group-22/sitemap.xml.gz
+Sitemap: https://crux-flutter.live/sitemap.xml.gz
