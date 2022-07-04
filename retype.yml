@@ -4,8 +4,10 @@ url: animesh-03.github.io/Flutter-cruX-Summer-Group-22
 branding:
   title: Flutter SG
   label: Guide
+  logo: /static/logo.png
 links:
   - text: Flutter docs
     link: https://docs.flutter.dev/
+favicon: static/favicon.png
 footer:
   copyright: "Written by [Animesh](https://github.com/Animesh-03) and [Akshat](https://github.com/Akshat-Oke)"

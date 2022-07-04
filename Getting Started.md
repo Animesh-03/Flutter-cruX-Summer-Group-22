@@ -28,8 +28,9 @@ You can watch these for a bit more info on Flutter and Dart:
 
 To get started with Flutter head on to https://docs.flutter.dev/get-started/install and follow the steps for your OS.
 
-<span style="color:orange">Make sure to follow every step sequentially and **pay attention to the warnings** to avoid errors</span>
-
+!!!warning
+Make sure to follow every step sequentially and **pay attention to the warnings** to avoid errors.
+!!!
 Skip the "Set up Android Emulator" part for now as we will look at it later. However, follow the next steps in the web page.
 
 Run `flutter doctor` in a command prompt or a shell after installation to ensure that flutter is working as intended.
