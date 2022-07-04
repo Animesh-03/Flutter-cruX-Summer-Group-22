@@ -1,3 +1,3 @@
 # Assignment
 
-Will updated soon.
+Will be updated soon.
