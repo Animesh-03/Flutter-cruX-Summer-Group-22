@@ -6,8 +6,12 @@ branding:
   label: Guide
   logo: /static/logo.png
 links:
+  - text: Discord
+    link: https://discord.org/jY2SwvbYWp
+    icon: comment-discussion
   - text: Flutter docs
     link: https://docs.flutter.dev/
+    icon: file-code
 favicon: static/favicon.png
 footer:
   copyright: "Written by [Animesh](https://github.com/Animesh-03) and [Akshat](https://github.com/Akshat-Oke)"

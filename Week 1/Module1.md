@@ -4,10 +4,12 @@ order: 200
 ---
 
 # Week1
+
 Welcome to Week 1 of the Flutter Summer Group by cruX!
 Before we jump into the code of the example counter app created by the `flutter create` command, let's look at what state is and the difference between stateless and stateful widgets.
 
 ## State
+
 In generic terms, state of an app or more specifically of a widget in flutter determines what is to be rendered on to the screen. In other words, the UI is a function of state.
 
 ![UI as a Function of State](../static/ui-equals-function-of-state.png "UI as Function of State")
@@ -15,14 +17,16 @@ In generic terms, state of an app or more specifically of a widget in flutter de
 To understand state better, let's look at stateless and stateful widgets.
 
 ## Stateless and Stateful Widgets
+
 ### Widgets
+
 A widget is a dart class which contains the info on how and what to render onto the screen.
 
 > This might be a good time to review or learn Object-Oriented Programming if you don't know already. You can look at the Python track which will introduce OOPS concept.
 
 Everything in flutter is based on widgets. A widget performs a specific task that is described by the ` build` method in the widget.
 
-----
+---
 
 A widget is similar to a react component and the build method is similar to the `render()` function(for a class component) or a `return()` statement (for a functional component) for those familiar with ReactJS.
 
@@ -37,6 +41,7 @@ This is all you need to understand the code in the counter app.
 **Note: A stateless widget can use stateful widgets and vice-versa in their `build` functions.**
 
 ## The Counter App
+
 To understand the code (in the file lib/main.dart) better, removing the comments is recommended.
 
 Like most programming langauges, dart has a `main()` function which acts as the entry point to the code so let's start with that.
@@ -65,10 +70,11 @@ The `child` parameter on the `FloatingActionButton` defines the Icon that is dis
 That's it! You now know the basics of Flutter.
 
 Didn't get parts of the code or the entirety of it? Maybe this will help: https://www.youtube.com/watch?v=-QRQIKtPTlI from timestamp 08:30 min to the end. Understood everything? Watch it anyway.
-
+[!ref target="blank" text="Watch here"](https://www.youtube.com/watch?v=-QRQIKtPTlI&t=510)
 Still didn't understand something? Feel free to ask in #discussion channel(preferred) using @FlutterInstructor or dm any of the FlutterInstructors.
 
 # Mini Assignment
+
 Modify the code in main.dart to toggle the visibility of any text widget using the <a href="https://api.flutter.dev/flutter/widgets/Visibility-class.html">`Visibility`</a> widget and the `floatingActionButton`.
 
 A slightly more advanced task would be to change the icon on the floating action button based on the visibility of the text. Take a look at `Icons.visibility` and `Icons.visibility_off` icons.
