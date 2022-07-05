@@ -1,19 +1,20 @@
 ---
 label: Widgets
-order: 100
+order: 190
 ---
 
 # Widgets in Flutter
 
 Flutter widgets are built using a modern framework that takes inspiration from React. The central idea is that you build your UI out of widgets. Widgets describe what their view should look like given their current configuration and state. When a widget’s state changes, the widget rebuilds its description, which the framework diffs against the previous description in order to determine the minimal changes needed in the underlying render tree to transition from one state to the next.
 
-=== Resources
-[!ref target="blank" text="Some Dart if you prefer videos" icon="device-camera-video"](https://youtube.com/watch?v=x0uinJvhNxI&t=6148)
+Watch these videos below for more information:
+==- Resources
+[!ref target="blank" text="Some Dart if you prefer videos" icon="device-camera-video"](https://youtu.be/x0uinJvhNxI?t=6148)
 [!ref target="blank" text="Read more on the official doc"](https://docs.flutter.dev/development/ui/widgets-intro)
 Watch the "Widgets" chapter here:
-[!ref target="blank" text="Widgets and constructors" icon="device-camera-video"](https://youtube.com/watch?v=x0uinJvhNxI)
+[!ref target="blank" text="Widgets and constructors" icon="device-camera-video"](https://youtu.be/x0uinJvhNxI)
 
-[!ref target="blank" text="More on widgets" icon="device-camera-video"](https://youtube.com/watch?v=azkqq0FNHuk)
+[!ref target="blank" text="More on widgets" icon="device-camera-video"](https://youtu.be/azkqq0FNHuk)
 
 ===
 
@@ -46,7 +47,21 @@ We will see more of `ListView` and `GridView` later :zap:
 
 Try making layouts using various widgets!
 
-## Challenge
+## Dart aside
+
+I hope you have already gone through the Dart codelabs. But just to be extra clear, here are some things you need to know about.
+
+### Function Parameters
+
+Functions can have required positional, optional positional or optional named parameters, as given [here](https://dart.dev/guides/language/language-tour#parameters)
+So when you are assigning Widgets as a `child`, you are using named parameters of the Widget's constructor.
+
+### Null safety
+
+You must know about null-safety since it is an important topic to understand.
+[!ref text="Null safety codelab"](https://dart.dev/codelabs/null-safety)
+
+## The Challenge
 
 Ready for a challenge? Try to replicate this Settings page design.
 ==- Show Challenge Design
@@ -56,14 +71,15 @@ Ready for a challenge? Try to replicate this Settings page design.
 ===
 Colors used are `0xFF15202D` for the background and `Colors.blueGrey.shade700` for the cards.
 
-<!-- > If you are not sure what these color values mean, refer to these links: -->
-
 !!!light About Colors
 If you are not sure what these color values mean, refer to these links:
-[!ref target="blank" text="Understanding color codes"](https://developintelligence.com/blog/2017/02/rgb-to-hex-understanding-the-major-web-color-codes)
-[!ref target="blank" text="The Color class in Dart"](https://api.flutter.dev/flutter/dart-ui/Color-class.html)
+[!ref target="blank" text="About color codes"](https://rb.gy/cj9nbj)
+[!ref target="blank" text="Color in Dart"](https://api.flutter.dev/flutter/dart-ui/Color-class.html)
 !!!
 Use the `Icon` widget for the arrow icon. Notice that it has to be on the far right.
-!!!success
-Solution will be posted in two days!
+
+!!!success Submit
+Submit your code [here](https://forms.gle/M1pMgmG8CGUBxoDe7) if you think you got it!
+
+Solution will be posted in two days.
 !!!
