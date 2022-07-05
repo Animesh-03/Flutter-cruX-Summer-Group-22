@@ -7,7 +7,7 @@ branding:
   logo: /static/logo.png
 links:
   - text: Discord
-    link: https://discord.org/jY2SwvbYWp
+    link: https://discord.gg/jY2SwvbYWp
     icon: comment-discussion
   - text: Flutter docs
     link: https://docs.flutter.dev/
