@@ -9,33 +9,34 @@
     <meta name="generator" content="Retype 2.3.0">
 
     <!-- Primary Meta Tags -->
-    <title>Week 1</title>
-    <meta name="title" content="Week 1">
-    <meta name="description" content="In this week we will learn about Layout widgets and constraints." />
+    <title>Constraints and State</title>
+    <meta name="title" content="Constraints and State">
+    <meta name="description" content="I trust you know the basic Widgets well." />
 
     <!-- Canonical -->
-    <link rel="canonical" href="https://crux-flutter.live/week-1/" />
+    <link rel="canonical" href="https://crux-flutter.live/week-1/module3/" />
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://crux-flutter.live/week-1/">
-    <meta property="og:title" content="Week 1">
-    <meta property="og:description" content="In this week we will learn about Layout widgets and constraints.">
+    <meta property="og:url" content="https://crux-flutter.live/week-1/module3/">
+    <meta property="og:title" content="Constraints and State">
+    <meta property="og:description" content="I trust you know the basic Widgets well.">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://crux-flutter.live/week-1/">
-    <meta property="twitter:title" content="Week 1">
-    <meta property="twitter:description" content="In this week we will learn about Layout widgets and constraints.">
+    <meta property="twitter:url" content="https://crux-flutter.live/week-1/module3/">
+    <meta property="twitter:title" content="Constraints and State">
+    <meta property="twitter:description" content="I trust you know the basic Widgets well.">
 
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../static/favicon.png" rel="icon" />
-    <link href="../resources/css/retype.css?v=2.3.0.710537128830" rel="stylesheet" />
+    <link href="../../static/favicon.png" rel="icon" />
+    <link href="../../resources/css/retype.css?v=2.3.0.710537128830" rel="stylesheet" />
 
-    <script type="text/javascript" src="../resources/js/config.js?v=2.3.0.710537128830" data-turbo-eval="false" defer></script>
-    <script type="text/javascript" src="../resources/js/retype.js?v=2.3.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" type="text/javascript" src="../resources/js/lunr.js?v=2.3.0.710537128830" data-turbo-eval="false" defer></script>
+    <script type="text/javascript" src="../../resources/js/config.js?v=2.3.0.710537128830" data-turbo-eval="false" defer></script>
+    <script type="text/javascript" src="../../resources/js/retype.js?v=2.3.0" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" type="text/javascript" src="../../resources/js/lunr.js?v=2.3.0.710537128830" data-turbo-eval="false" defer></script>
+    <script id="prism-js" type="text/javascript" src="../../resources/js/prism.js?v=2.3.0.710537128830" defer></script>
 
     <style>
       .c {
@@ -74,10 +75,10 @@
                 <!-- Logo -->
                 <div class="flex items-center justify-between h-full py-2 md:w-75">
                     <div class="flex items-center px-2 md:px-6">
-                        <a id="docs-site-logo" href="../" class="flex items-center leading-snug text-2xl">
+                        <a id="docs-site-logo" href="../../" class="flex items-center leading-snug text-2xl">
                             <span class="w-10 mr-2 grow-0 shrink-0 overflow-hidden">
-                                <img class="max-h-10 dark:hidden md:inline-block" src="../static/logo.png">
-                                <img class="max-h-10 hidden dark:inline-block" src="../static/logo.png">
+                                <img class="max-h-10 dark:hidden md:inline-block" src="../../static/logo.png">
+                                <img class="max-h-10 hidden dark:inline-block" src="../../static/logo.png">
                             </span>
                             <span class="dark:text-white font-semibold line-clamp-1 md:line-clamp-2">Flutter SG</span>
                         </a><span class="hidden px-2 py-1 ml-4 text-sm font-semibold leading-none text-root-logo-label-text bg-root-logo-label-bg rounded-sm md:inline-block">Guide</span>
@@ -229,20 +230,278 @@
                                 <div id="docs-sidebar-right-toggle"></div>
                 
                                 <!-- Page content  -->
-<doc-anchor-target id="week-1" class="break-words">
+<doc-anchor-target id="constraints-and-state" class="break-words">
     <h1>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#week-1">#</doc-anchor-trigger>
-        <span>Week 1</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#constraints-and-state">#</doc-anchor-trigger>
+        <span>Constraints and State</span>
     </h1>
 </doc-anchor-target>
-<p>In this week we will learn about Layout widgets and constraints.</p>
-<doc-anchor-target id="assignment">
+<p>I trust you know the basic Widgets well.</p>
+<p>Go through these documents to understand constraints in Flutter:</p>
+<ol>
+<li><a href="https://docs.flutter.dev/development/ui/layout/constraints">Constraints</a></li>
+<li><a href="https://docs.flutter.dev/development/ui/layout/box-constraints">Box Constraints</a></li>
+</ol>
+<doc-anchor-target id="state">
     <h2>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#assignment">#</doc-anchor-trigger>
-        <span>Assignment</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#state">#</doc-anchor-trigger>
+        <span>State</span>
     </h2>
 </doc-anchor-target>
-<p>The assignment will be a layout replication challenge.</p>
+<p>We have already come across <code v-pre>state</code> in the counter app, where the state was defined by a simple <code v-pre>_counter</code> variable.</p>
+<p><strong>setState</strong>
+We use the <code v-pre>setState</code> function in a <code v-pre>Stateful</code> widget to update the state and rebuild the widget tree. A stateful widget preserves its state and uses it to redraw itself in the future (if the state changes).</p>
+<p>Read about using Stateful and Stateless widgets in this <a href="https://docs.flutter.dev/development/ui/interactive#stateful-and-stateless-widgets">excellent document.</a>
+<div class="mb-6 px-5 py-4 flex justify-between relative border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded transition-colors duration-150">
+    <div class="flex items-center text-blue-500 dark:text-blue-400">
+        <span class="inline-block mb-px">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" role="presentation" fill="currentColor"><path fill="none" d="M0 0h24v24H0z"/><path d="M19.92 12.38a1 1 0 00-.22-1.09l-7-7a.996.996 0 10-1.41 1.41l5.3 5.3H5c-.55 0-1 .45-1 1s.45 1 1 1h11.59l-5.29 5.29a.996.996 0 000 1.41c.19.2.44.3.7.3s.51-.1.71-.29l7-7c.09-.09.16-.21.21-.33z"/></svg>
+        </span>
+        <span class="inline-block font-medium ml-2">Here</span>
+    </div>
+    <div class="flex items-center text-xs text-gray-400 dark:text-dark-400">
+        <span>https://docs.flutter.dev/development/ui/interactive</span>
+    </div>
+    <a href="https://docs.flutter.dev/development/ui/interactive" class="absolute block inset-0"></a>
+</div>
+</p>
+<p>So in Flutter, a stateful widget can hold the state and pass it down so that its children can access it. For example, the home screen in a todo app can store the tasks list as a state and allow other Widgets on the screen to access this list.</p>
+<doc-tabs>
+<doc-tab id="todoscreen">
+<template #title>TodoScreen</template>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-dart" data-line="10,17-18"><code v-pre class="language-dart">class TodoScreen extends StatefulWidget {
+  TodoScreen({Key? key, required this.tasks}) : super(key: key);
+  List&lt;Task&gt; tasks;
+  @override
+  State&lt;TodoScreen&gt; createState() =&gt; _TodoScreenState(tasks);
+}
+
+class _TodoScreenState extends State&lt;TodoScreen&gt; {
+  _TodoScreenState(this.tasks);
+  List&lt;Task&gt; tasks;
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      ...
+      body: ListView(
+        children: [
+          TodaysTasks(tasks),
+          UpcomingTasks(tasks)
+        ]
+      )
+    );
+  }
+}</code></pre>
+</doc-codeblock></div>
+</doc-tab>
+<doc-tab id="todaystasks">
+<template #title>TodaysTasks</template>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-dart" data-line="7-9"><code v-pre class="language-dart">class TodaysTasks extends StatelessWidget {
+  const TodaysTasks({Key? key}, this.tasks) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return ListView(
+      children: tasks.map((task) =&gt; ListTile(
+          title: task.title
+        )).toList()
+    );
+  }
+}</code></pre>
+</doc-codeblock></div>
+</doc-tab>
+</doc-tabs>
+<p>Here we see that the state needed by <code v-pre>TodaysTasks</code> and <code v-pre>UpcomingTasks</code> widgets is &quot;lifted up&quot; to the parent widget and passed down.</p>
+<p>What if we want to change the state in the parent widget from a child?</p>
+<p>A trivial solution is to make the state variable(s) global such that all widgets have access to it. But global variables like these make code complicated very quickly and unmanageable.</p>
+<p>Instead we declare a function in the parent widget and pass this function as a &quot;callback&quot; to the child widgets.
+Let&#x27;s see this in the above example. Suppose we want to be able to delete a task from the <code v-pre>tasks</code> list.</p>
+<ol>
+<li>Declare the function which deletes the task.</li>
+</ol>
+<div class="codeblock-wrapper"><doc-codeblock>
+<div class="codeblock-title">TodoScreen</div>
+<pre class="language-dart" data-line="3-7"><code v-pre class="language-dart">  ...
+  List&lt;Task&gt; tasks;
+  void deleteTask(int id){
+    setState((){
+      tasks.removeWhere((task) =&gt; task.id == id);
+    });
+  }
+  @override
+  ...</code></pre>
+</doc-codeblock></div>
+<ol start="2">
+<li>Pass this function as a parameter to the child widgets.
+<blockquote>
+<p>Note that we introduced named parameters to make our lives easier.</p>
+</blockquote>
+</li>
+</ol>
+<div class="codeblock-wrapper"><doc-codeblock>
+<div class="codeblock-title">TodoScreen</div>
+<pre class="language-dart" data-line="3-4"><code v-pre class="language-dart">  ...
+        children: [
+          TodaysTasks(tasks: tasks, delFunc: deleteTask),
+          UpcomingTasks(tasks: tasks, delFunc: deleteTask)
+        ]
+  ...</code></pre>
+</doc-codeblock></div>
+<ol start="3">
+<li>Call the function from the child widget.</li>
+</ol>
+<div class="codeblock-wrapper"><doc-codeblock>
+<div class="codeblock-title">TodaysTasks</div>
+<pre class="language-dart" data-line="4-6"><code v-pre class="language-dart">...
+      children: tasks.map((task) =&gt; ListTile(
+          title: task.title,
+          onTap: (){
+            delFunc(task.id);
+          }
+        )).toList()
+...</code></pre>
+</doc-codeblock></div>
+<div class="flex mb-6">
+    <div class="shrink-0 w-1 rounded-tl rounded-bl bg-green-500"></div>
+    <div class="flex w-full py-4 border border-l-0 border-gray-300 rounded-tr rounded-br doc-alert bg-white dark:bg-dark-700 dark:border-dark-700" role="alert">
+        <div class="flex items-center ml-4 h-7">
+            <svg xmlns="http://www.w3.org/2000/svg" class="mb-px text-green-500" width="22" height="22" viewBox="0 0 24 24" role="presentation">
+                <g fill="currentColor"><g>
+                    <path d="M21 9.09c-.55 0-1 .45-1 1v.92c0 4.96-4.04 8.99-9 8.99-4.97 0-9-4.04-9-9s4.04-9 9-9c1.27 0 2.5.26 3.66.78.51.22 1.1 0 1.32-.51.23-.5 0-1.1-.51-1.32C14.06.32 12.56 0 11.01 0H11C4.94 0 0 4.93 0 10.99 0 17.06 4.93 22 10.99 22H11c6.06 0 11-4.93 11-10.99v-.92c0-.56-.45-1-1-1z"></path>
+                    <path d="M8.71 9.31a.996.996 0 10-1.41 1.41l3 3c.19.19.44.29.71.29.27 0 .52-.11.71-.29l10-10.01a.996.996 0 10-1.41-1.41L11 11.6 8.71 9.31z"></path>
+                </g></g>
+            </svg>
+        </div>
+        <div class="pr-5 ml-3 w-full">
+            <h5>Hooray!</h5>
+<p>This is your first very simple state management which can be used for short widget trees.</p>
+        </div>
+    </div>
+</div>
+<p>Read the more detailed explanation <a href="https://medium.com/nerd-for-tech/lifting-state-up-and-callbacks-7a19d0bdbe53">here.</a></p>
+<div class="flex mb-6">
+    <div class="shrink-0 w-1 rounded-tl rounded-bl bg-blue-500 dark:bg-blue-400"></div>
+    <div class="flex w-full py-4 border border-l-0 border-gray-300 rounded-tr rounded-br doc-alert bg-white dark:bg-dark-700 dark:border-dark-700" role="alert">
+        <div class="flex items-center ml-4 h-7">
+            <svg xmlns="http://www.w3.org/2000/svg" class="mb-px text-blue-500 dark:text-blue-400" width="22" height="22" viewBox="0 0 24 24" role="presentation">
+                <g fill="currentColor"><g>
+                    <path d="M12 1C5.93 1 1 5.93 1 12s4.93 11 11 11 11-4.93 11-11S18.07 1 12 1zm0 20c-4.96 0-9-4.04-9-9s4.04-9 9-9 9 4.04 9 9-4.04 9-9 9z"></path>
+                    <path d="M12 11c-.55 0-1 .45-1 1v4c0 .55.45 1 1 1s1-.45 1-1v-4c0-.55-.45-1-1-1zM12.01 7c-.56 0-1 .45-1 1s.45 1 1 1 1-.45 1-1-.45-1-1-1z"></path>
+                    <path fill="none" d="M0 0h24v24H0z"></path>
+                </g></g>
+            </svg>
+        </div>
+        <div class="pr-5 ml-3 w-full">
+            <h5>State Management</h5>
+<p>We will look at <em>proper</em> state management in Week 3. Do not stress till then, we have lots to do first!</p>
+        </div>
+    </div>
+</div>
+<doc-anchor-target id="dart-aside">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#dart-aside">#</doc-anchor-trigger>
+        <span>Dart aside</span>
+    </h2>
+</doc-anchor-target>
+<doc-anchor-target id="functions">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#functions">#</doc-anchor-trigger>
+        <span>Functions</span>
+    </h3>
+</doc-anchor-target>
+<p>Dart has first-class functions, which can be treated as any other variable: passed as an argument or returned by functions. This is why we can pass around callbacks in &quot;lifting state up&quot; mechanism.</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<div class="codeblock-title">Example</div>
+<pre class="language-dart"><code v-pre class="language-dart">int number = 4;
+String greeting = 'hello';
+Function multiply = (int a, int b) {
+  return a * b;
+};
+multiply(3, 4);// 12
+Function operateWith2 = (Function(int, int) f, int x){
+  return f(2, x); //call f with 2 and x
+};
+operateWith2(multiply, 4);// 8</code></pre>
+</doc-codeblock></div>
+<p>
+<div class="mb-6 px-5 py-4 flex justify-between relative border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded transition-colors duration-150">
+    <div class="flex items-center text-blue-500 dark:text-blue-400">
+        <span class="inline-block mb-px">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" role="presentation" fill="currentColor"><path fill="none" d="M0 0h24v24H0z"/><path d="M19.92 12.38a1 1 0 00-.22-1.09l-7-7a.996.996 0 10-1.41 1.41l5.3 5.3H5c-.55 0-1 .45-1 1s.45 1 1 1h11.59l-5.29 5.29a.996.996 0 000 1.41c.19.2.44.3.7.3s.51-.1.71-.29l7-7c.09-.09.16-.21.21-.33z"/></svg>
+        </span>
+        <span class="inline-block font-medium ml-2">First class functions</span>
+    </div>
+    <div class="flex items-center text-xs text-gray-400 dark:text-dark-400">
+        <span>https://developer.mozilla.org/en-US/docs/Glossary/First-class_Function</span>
+    </div>
+    <a href="https://developer.mozilla.org/en-US/docs/Glossary/First-class_Function" class="absolute block inset-0"></a>
+</div>
+</p>
+<doc-anchor-target id="style">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#style">#</doc-anchor-trigger>
+        <span>Style</span>
+    </h3>
+</doc-anchor-target>
+<p>An important part of good code is good style that is consistent across programs written in a language. Consistent naming, ordering, and formatting helps code that is the same <em>look</em> the same.</p>
+<p>The essential style to keep in mind are these:</p>
+<doc-anchor-target id="naming-conventions">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#naming-conventions">#</doc-anchor-trigger>
+        <span>Naming conventions</span>
+    </h4>
+</doc-anchor-target>
+<p>Use <strong>UpperCamelCase</strong> for types (classes, enums, extensions, type parameters) and <strong>lowerCamelCase</strong> for other variables.</p>
+<doc-anchor-target id="trailing-commas">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#trailing-commas">#</doc-anchor-trigger>
+        <span>Trailing commas</span>
+    </h4>
+</doc-anchor-target>
+<p>Also, put a trailing commas after parameter lists to help the formatter format it pleasantly.
+Example:</p>
+<doc-tabs>
+<doc-tab id="without-trailing-commas">
+<template #title>Without trailing commas</template>
+<p>Notice the <code v-pre>)))</code> at the end. Looks like a very sharp corner in the code.</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-dart" data-line="9"><code v-pre class="language-dart">...
+ appBar: AppBar(
+            backgroundColor: Colors.transparent,
+            elevation: 0,
+            title: Text(widget.title,
+                textScaleFactor: 2,
+                style: const TextStyle(
+                  color: Colors.grey,
+                ))),
+  body: Column(...),
+...</code></pre>
+</doc-codeblock></div>
+</doc-tab>
+<doc-tab id="with-trailing-commas">
+<template #title>With trailing commas</template>
+<p>Ah, now it is much better to follow each widget.</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-dart" data-line="10-12"><code v-pre class="language-dart">...
+  appBar: AppBar(
+        backgroundColor: Colors.transparent,
+        elevation: 0,
+        title: Text(
+          widget.title,
+          textScaleFactor: 2,
+          style: const TextStyle(
+            color: Colors.grey,
+          ),
+        ),
+      ),
+  body: Column(...),
+...</code></pre>
+</doc-codeblock></div>
+</doc-tab>
+</doc-tabs>
+<p>Read about styling in <a href="https://dart.dev/guides/language/effective-dart/style">this effective dart document.</a></p>
 
                                 
                                 <!-- Required only on API pages -->
@@ -252,20 +511,20 @@
                             
                                 <nav class="flex mt-14">
                                     <div class="w-1/2">
-                                        <a class="px-5 py-4 h-full flex items-center break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-l-lg transition-colors duration-150 relative hover:z-5" href="../getting-started/">
+                                        <a class="px-5 py-4 h-full flex items-center break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-l-lg transition-colors duration-150 relative hover:z-5" href="../../week-1/module2/">
                                             <svg xmlns="http://www.w3.org/2000/svg" class="mr-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19 11H7.41l5.29-5.29a.996.996 0 10-1.41-1.41l-7 7a1 1 0 000 1.42l7 7a1.024 1.024 0 001.42-.01.996.996 0 000-1.41L7.41 13H19c.55 0 1-.45 1-1s-.45-1-1-1z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
                                             <span>
                                                 <span class="block text-xs font-normal text-gray-400 dark:text-dark-400">Previous</span>
-                                                <span class="block mt-1">Installation And Introduction</span>
+                                                <span class="block mt-1">Widgets</span>
                                             </span>
                                         </a>
                                     </div>
                             
                                     <div class="w-1/2">
-                                        <a class="px-5 py-4 -mx-px h-full flex items-center justify-end break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-r-lg transition-colors duration-150 relative hover:z-5" href="../week-1/module1/">
+                                        <a class="px-5 py-4 -mx-px h-full flex items-center justify-end break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-r-lg transition-colors duration-150 relative hover:z-5" href="../../week-1/assignment/">
                                             <span>
                                                 <span class="block text-xs font-normal text-right text-gray-400 dark:text-dark-400">Next</span>
-                                                <span class="block mt-1">The Counter App</span>
+                                                <span class="block mt-1">Assignment</span>
                                             </span>
                                             <svg xmlns="http://www.w3.org/2000/svg" class="ml-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19.92 12.38a1 1 0 00-.22-1.09l-7-7a.996.996 0 10-1.41 1.41l5.3 5.3H5c-.55 0-1 .45-1 1s.45 1 1 1h11.59l-5.29 5.29a.996.996 0 000 1.41c.19.2.44.3.7.3s.51-.1.71-.29l7-7c.09-.09.16-.21.21-.33z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
                                         </a>
@@ -309,6 +568,6 @@
 
     <div id="docs-overlay-target"></div>
 
-    <script>window.__DOCS__ = { "title": "Week 1", level: 1, icon: "file", hasPrism: false, hasMermaid: false, hasMath: false }</script>
+    <script>window.__DOCS__ = { "title": "Constraints and state", level: 2, icon: "file", hasPrism: true, hasMermaid: false, hasMath: false }</script>
 </body>
 </html>
