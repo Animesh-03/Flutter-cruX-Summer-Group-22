@@ -78,8 +78,83 @@ If you are not sure what these color values mean, refer to these links:
 !!!
 Use the `Icon` widget for the arrow icon. Notice that it has to be on the far right.
 
+<!--
 !!!success Submit
 Submit your code [here](https://forms.gle/M1pMgmG8CGUBxoDe7) if you think you got it!
 
 Solution will be posted in two days.
-!!!
+!!! -->
+
+### Solution
+
+```dart
+import 'package:flutter/material.dart';
+
+void main() async {
+  runApp(
+    MaterialApp(
+      debugShowCheckedModeBanner: false,
+      theme: ThemeData.dark(),
+      home: Scaffold(
+        backgroundColor: const Color(0xFF15202D),
+        body: Container(
+          padding: const EdgeInsets.symmetric(vertical: 24, horizontal: 12),
+          child: DefaultTextStyle(
+            style: const TextStyle(fontSize: 19, color: Colors.white70),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                const Text("Settings", style: TextStyle(fontSize: 32)),
+                const SizedBox(height: 13),
+                Container(
+                    margin: const EdgeInsets.only(bottom: 10),
+                    padding:
+                        const EdgeInsets.symmetric(vertical: 7, horizontal: 13),
+                    decoration: BoxDecoration(
+                      color: Colors.blueGrey.shade700,
+                      borderRadius: BorderRadius.circular(8),
+                    ),
+//                     height: 50,
+                    width: 300,
+                    child: Row(
+                      children: const [
+                        Expanded(
+                          child: Text("Account"),
+                        ),
+                        Icon(Icons.arrow_forward),
+                      ],
+                    )),
+                Container(
+                  margin: const EdgeInsets.only(bottom: 8),
+                  decoration: BoxDecoration(
+                    color: Colors.blueGrey.shade700,
+                    borderRadius: BorderRadius.circular(8),
+                  ),
+                  height: 50,
+                ),
+                Container(
+                  margin: const EdgeInsets.only(bottom: 8),
+                  decoration: BoxDecoration(
+                    color: Colors.blueGrey.shade700,
+                    borderRadius: BorderRadius.circular(8),
+                  ),
+                  height: 50,
+                ),
+                Container(
+                  margin: const EdgeInsets.only(bottom: 8),
+                  decoration: BoxDecoration(
+                    color: Colors.blueGrey.shade700,
+                    borderRadius: BorderRadius.circular(8),
+                  ),
+                  height: 50,
+                ),
+              ],
+            ),
+          ),
+        ),
+      ),
+    ),
+  );
+}
+
+```
