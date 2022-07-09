@@ -152,9 +152,9 @@ operateWith2(multiply, 4);// 8
 
 ### Style
 
-An important part of good code is good style that is consistent across programs written in a language. Consistent naming, ordering, and formatting helps code that is the same _look_ the same.
+An important part of good code is good style that is consistent across programs written in a language. Consistent naming, ordering, and formatting helps code that _is_ the same _look_ the same.
 
-The essential style to keep in mind are these:
+The essential styles to keep in mind are these:
 
 #### Naming conventions
 
@@ -162,8 +162,8 @@ Use **UpperCamelCase** for types (classes, enums, extensions, type parameters) a
 
 #### Trailing commas
 
-Also, put a trailing commas after parameter lists to help the formatter format it pleasantly.
-Example:
+Add trailing commas after parameter lists to help the formatter format it pleasantly.
+
 +++ Without trailing commas
 Notice the `)))` at the end. Looks like a very sharp corner in the code.
 
