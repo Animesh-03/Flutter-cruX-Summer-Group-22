@@ -6,7 +6,7 @@ order: 1
 
 Week 1... is over! Great work on learning the basics of Flutter and Dart. This assignment is going to be the proof of your learning, let's go!
 
-## Dart
+## Dart (Part 1)
 
 Generics are an important part of Flutter and it is essential that you are comfortable with them. Go through [this article on generics](https://dart.academy/generics-in-dart-and-flutter/) to know more.
 
@@ -113,6 +113,7 @@ Amazing, the robots are working great! You think your job is done and are going 
 He wants an extra functionality to inspect the pancakes to see whether they meets his standards and to remove them from the stack if necessary.
 
 That is easy for the bright programmer you are! Create an extension on PancakeHandler to add this function.
+
 === inspect: `(bool Function check()) -> int`
 Remove all pancakes which return false from `check`.
 Returns number of pancakes removed.
@@ -120,7 +121,7 @@ Returns number of pancakes removed.
 
 ### Starter code
 
-Use this starter code and implement the classes and functions.
+Use this starter code and implement the classes and functions. More information in the [submission guidelines](#submission-guidelines)
 ==- Starter code
 
 ```dart
@@ -198,10 +199,43 @@ extension ChefsPancakeHandler on PancakeHandler {
 
 ===
 
-## Flutter
+## Flutter (Part 2)
 
-Uploading soon
+Recreate this design in Flutter. The best submission will be marked as the "official" solution!
+[!file Download design](/static/Assignment_1.jpg)
+==- Show design
+
+![](/static/Assignment_1.jpg)
+
+ <!-- <img src="/static/Assignment_1.jpg" height="300"> -->
+
+===
 
 ## Submission guidelines
 
-Will be updated along with the Flutter assignment.
+### Dart (Part 1)
+
+You have to submit a dart project with your code.
+
+Fork [this repository](https://github.com/Akshat-Oke/crux-flutter-assignment_1) and clone it locally.
+[!ref text="Part 1"](https://github.com/Akshat-Oke/crux-flutter-assignment_1)
+
+- Use the starter code in the `lib/assignment_1.dart` and implement the class methods.
+
+- To test, run `dart test` in the the root directory, or navigate to the `test/assignment_1_test.dart` file and click the `Run` text button above `void main()` in VS Code.
+
+Once finished, submit the link to your fork in the form given below.
+
+### Flutter (Part 2)
+
+Create a git repository and push it to GitHub. Submit the link to this repository.
+
+### Google Form
+
+Submit this form embedded below.
+
+> Or [click here](https://docs.google.com/forms/d/e/1FAIpQLSf9pZWhwFGWGDjESMvSCGGQt8Rls5PCAyEmD3-eDn0-TpHhvw/viewform?usp=sf_link) to open it in a separate browser tab.
+
+[!embed](https://docs.google.com/forms/d/e/1FAIpQLSf9pZWhwFGWGDjESMvSCGGQt8Rls5PCAyEmD3-eDn0-TpHhvw/viewform?embedded=true)
+
+<!-- <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSf9pZWhwFGWGDjESMvSCGGQt8Rls5PCAyEmD3-eDn0-TpHhvw/viewform?embedded=true" width="640" height="2288" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe> -->
