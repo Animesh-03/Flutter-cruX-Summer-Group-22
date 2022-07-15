@@ -9,33 +9,33 @@
     <meta name="generator" content="Retype 2.4.0">
 
     <!-- Primary Meta Tags -->
-    <title>Installation And Introduction</title>
-    <meta name="title" content="Installation And Introduction">
-    <meta name="description" content="Flutter is a multiplatform framework from Google used for building apps for web, mobile and desktop." />
+    <title>Navigation</title>
+    <meta name="title" content="Navigation">
+    <meta name="description" content="Navigation here refers to travelling between the various pages, which in the context of navigation are called" />
 
     <!-- Canonical -->
-    <link rel="canonical" href="https://crux-flutter.live/getting-started/" />
+    <link rel="canonical" href="https://crux-flutter.live/week-2/module2/" />
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://crux-flutter.live/getting-started/">
-    <meta property="og:title" content="Installation And Introduction">
-    <meta property="og:description" content="Flutter is a multiplatform framework from Google used for building apps for web, mobile and desktop.">
+    <meta property="og:url" content="https://crux-flutter.live/week-2/module2/">
+    <meta property="og:title" content="Navigation">
+    <meta property="og:description" content="Navigation here refers to travelling between the various pages, which in the context of navigation are called">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://crux-flutter.live/getting-started/">
-    <meta property="twitter:title" content="Installation And Introduction">
-    <meta property="twitter:description" content="Flutter is a multiplatform framework from Google used for building apps for web, mobile and desktop.">
+    <meta property="twitter:url" content="https://crux-flutter.live/week-2/module2/">
+    <meta property="twitter:title" content="Navigation">
+    <meta property="twitter:description" content="Navigation here refers to travelling between the various pages, which in the context of navigation are called">
 
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../static/favicon.png" rel="icon" />
-    <link href="../resources/css/retype.css?v=2.4.0.711191493467" rel="stylesheet" />
+    <link href="../../static/favicon.png" rel="icon" />
+    <link href="../../resources/css/retype.css?v=2.4.0.711191493467" rel="stylesheet" />
 
-    <script type="text/javascript" src="../resources/js/config.js?v=2.4.0.711191493467" data-turbo-eval="false" defer></script>
-    <script type="text/javascript" src="../resources/js/retype.js?v=2.4.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" type="text/javascript" src="../resources/js/lunr.js?v=2.4.0.711191493467" data-turbo-eval="false" defer></script>
+    <script type="text/javascript" src="../../resources/js/config.js?v=2.4.0.711191493467" data-turbo-eval="false" defer></script>
+    <script type="text/javascript" src="../../resources/js/retype.js?v=2.4.0" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" type="text/javascript" src="../../resources/js/lunr.js?v=2.4.0.711191493467" data-turbo-eval="false" defer></script>
 
     <style>
       .c {
@@ -74,10 +74,10 @@
                 <!-- Logo -->
                 <div class="flex items-center justify-between h-full py-2 md:w-75">
                     <div class="flex items-center px-2 md:px-6">
-                        <a id="docs-site-logo" href="../" class="flex items-center leading-snug text-2xl">
+                        <a id="docs-site-logo" href="../../" class="flex items-center leading-snug text-2xl">
                             <span class="w-10 mr-2 grow-0 shrink-0 overflow-hidden">
-                                <img class="max-h-10 dark:hidden md:inline-block" src="../static/logo.png">
-                                <img class="max-h-10 hidden dark:inline-block" src="../static/logo.png">
+                                <img class="max-h-10 dark:hidden md:inline-block" src="../../static/logo.png">
+                                <img class="max-h-10 hidden dark:inline-block" src="../../static/logo.png">
                             </span>
                             <span class="dark:text-white font-semibold line-clamp-1 md:line-clamp-2">Flutter SG</span>
                         </a><span class="hidden px-2 py-1 ml-4 text-sm font-semibold leading-none text-root-logo-label-text bg-root-logo-label-bg rounded-sm md:inline-block">Guide</span>
@@ -229,90 +229,52 @@
                                 <div id="docs-sidebar-right-toggle"></div>
                 
                                 <!-- Page content  -->
-<doc-anchor-target id="installation-and-introduction" class="break-words">
+<doc-anchor-target id="navigation" class="break-words">
     <h1>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#installation-and-introduction">#</doc-anchor-trigger>
-        <span><strong>Installation And Introduction</strong></span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#navigation">#</doc-anchor-trigger>
+        <span>Navigation</span>
     </h1>
 </doc-anchor-target>
-<doc-anchor-target id="what-is-flutter">
+<p>Navigation here refers to travelling between the various pages, which in the context of navigation are called <code v-pre>Routes</code> in your app.</p>
+<doc-anchor-target id="push-and-pop">
     <h2>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#what-is-flutter">#</doc-anchor-trigger>
-        <span>What is Flutter?</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#push-and-pop">#</doc-anchor-trigger>
+        <span>Push and Pop</span>
     </h2>
 </doc-anchor-target>
-<p>Flutter is a multiplatform framework from Google used for building apps for web, mobile and desktop.</p>
-<p>What do I mean by multiplatform? It means one can build apps for a device regardless of the platform it is running on like Android, iOS, Windows, Linux etc.</p>
-<p>You might be aware of the shortage of apps for iOS for campus related task. This is because all those apps were built using native frameworks.</p>
-<p>Native apps are those which are built for a specific platform and this means a developer needs to write code separately for each of those platforms though they are meant to serve the same purpose. This is very disappointing for developers that code apps that require multiple platforms.</p>
-<p>Flutter however solves this issue as it only requires a developer to code once yet it can build to many different platforms like Android, iOS and Windows. This also ensures uniformity across the various platforms the app is deployed to.</p>
-<p>Another advantage of Flutter over the standard frameworks which use HTML and CSS is that Flutter only uses &quot;Dart&quot; for everything it does. Dart is very similar to other languages like Java and shares most of the syntax you use in C/C++ with some additional functions.</p>
-<p>You can watch these for a bit more info on Flutter and Dart:</p>
-<ol>
-<li><a href="https://www.youtube.com/watch?v=lHhRhPV--G0">Flutter in 100 seconds</a></li>
-<li><a href = "https://www.youtube.com/watch?v=NrO0CJCbYLA">Dart in 100 seconds</a></li>
-</ol>
-<doc-anchor-target id="installation">
+<p>Sound familiar?</p>
+<p>In the assignment last week, you were asked to create a <code v-pre>stack</code> with the <code v-pre>push</code> and <code v-pre>pop</code> functions.</p>
+<p>The navigation system in flutter is very similar to a stack. Here the routes are stacked upon each other. To demonstrate this, let&#x27;s consider &#x27;WhatsApp&#x27; a very familiar app. In case you never heard of it you belong to the Amish community.</p>
+<p>WhatsApp has a home screen displaying the various groups and contacts which we call the <code v-pre>Home</code> page. On tapping one of the contacts, you are sent to the <code v-pre>Chat</code> page but what happens to the <code v-pre>Home</code> page? It lies underneath the <code v-pre>Chat</code> page still in memory, similar to a stack. Once you press the back button you go back to the <code v-pre>Home</code> page meaning that the <code v-pre>Chat</code> page has been <code v-pre>pop()</code>-ed.</p>
+<p>What happens if the Navigation doesn&#x27;t function like a stack but instead there&#x27;s always a single page in memory? To go back to a previous page, the app will need to re-render the entire page going through all the widgets in the tree. This will consume a significant time which will make your app feel less responsive.</p>
+<p>Navigation is a pretty broad topic to cover. Fortunately, flutter docs has a pretty good tutorial-esque documentation.</p>
+<p><a href="https://docs.flutter.dev/cookbook/navigation">Navigation Cookbook</a></p>
+<p>Here&#x27;s a little more detailed but also more complicated documentation of the <code v-pre>Navigator</code> widget: <a href="https://api.flutter.dev/flutter/widgets/Navigator-class.html">Navigator</a>. You might not understand everything in the docs but I recommend to give it a read anyways. Also look at the static methods of the <code v-pre>Navigator</code> widget just to get an idea of what can and cannot be done.</p>
+<doc-anchor-target id="page-transitions">
     <h2>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#installation">#</doc-anchor-trigger>
-        <span>Installation</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#page-transitions">#</doc-anchor-trigger>
+        <span>Page Transitions</span>
     </h2>
 </doc-anchor-target>
-<p>To get started with Flutter head on to <a href="https://docs.flutter.dev/get-started/install">https://docs.flutter.dev/get-started/install</a> and follow the steps for your OS.</p>
-<div class="flex mb-6">
-    <div class="shrink-0 w-1 rounded-tl rounded-bl bg-yellow-500"></div>
-    <div class="flex w-full py-4 border border-l-0 border-gray-300 rounded-tr rounded-br doc-alert bg-white dark:bg-dark-700 dark:border-dark-700" role="alert">
-        <div class="flex items-center ml-4 h-7">
-            <svg xmlns="http://www.w3.org/2000/svg" class="mb-px text-yellow-500" width="22" height="22" viewBox="0 0 24 24" role="presentation">
-                <g fill="currentColor"><g>
-                    <path d="M22.48 15.59L14.01 1.45A2.968 2.968 0 0012.16.09c-.78-.19-1.58-.07-2.27.35-.41.25-.76.6-1.01 1.01v.01L.4 15.6c-.83 1.43-.33 3.27 1.1 4.1.45.26.95.4 1.48.4h16.95c.8-.01 1.55-.33 2.11-.9.56-.57.87-1.33.86-2.13a3.04 3.04 0 00-.42-1.48zm-1.87 2.21c-.19.19-.44.3-.69.3H2.99c-.17 0-.34-.05-.49-.13a.992.992 0 01-.37-1.35L10.6 2.48c.08-.14.2-.25.34-.33a.992.992 0 011.37.33l8.46 14.13c.09.15.13.32.13.49 0 .26-.1.51-.29.7z"></path>
-                    <path d="M11.45 12.1c.55 0 1-.45 1-1v-4c0-.55-.45-1-1-1s-1 .45-1 1v4c0 .56.45 1 1 1zM11.46 14.1c-.56 0-1 .45-1 1s.45 1 1 1 1-.45 1-1-.45-1-1-1z"></path>
-                </g></g>
-            </svg>
-        </div>
-        <div class="pr-5 ml-3 w-full">
-<p>Make sure to follow every step sequentially and <strong>pay attention to the warnings</strong> to avoid errors.</p>
-        </div>
-    </div>
-</div>
-<p>Skip the &quot;Set up Android Emulator&quot; part for now as we will look at it later. However, follow the next steps in the web page.</p>
-<p>Run <code v-pre>flutter doctor</code> in a command prompt or a shell after installation to ensure that flutter is working as intended.</p>
-<p>We will be using VSCode throughout the summer group instead of Android Studio as VSCode is a million times faster and also will work on relatively potato PCs. However, this does not mean that installation of Android Studio is optional as Flutter needs it to be installed in your system.</p>
-<p>To start using flutter in VSCode install the following extensions:</p>
-<ol>
-<li><a href="https://marketplace.visualstudio.com/items?itemName=Dart-Code.flutter">Flutter Extension</a></li>
-<li><a href="https://marketplace.visualstudio.com/items?itemName=Nash.awesome-flutter-snippets">Awesome Flutter Snippets </a></li>
-</ol>
-<p>Awesome flutter snippets provide certain snippets which makes life easier. We will be mainly using it for building stateless and stateful Widgets in the course so search the shortcuts for them in its documentation.</p>
-<doc-anchor-target id="dart">
-    <h2>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#dart">#</doc-anchor-trigger>
-        <span>Dart</span>
-    </h2>
+<p><code v-pre>MaterialPageRoute</code> provides an in-built page transition which looks better than the ordinary transition. You can create custom page transition animations too if required but we leave that part to you to explore.</p>
+<p>You can look at <a href="https://pub.dev/packages/page_transition">page_transition</a> package which has a few page transitions which are easy to use. To learn how to use it take a look at <a href="https://www.youtube.com/watch?v=q-e5t3qnB_M">this</a>. If you want to do something that is not methioned in the video look at the package&#x27;s documentation in <a href="https://pub.dev">pub.dev</a>.</p>
+<doc-anchor-target id="forms">
+    <h1>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#forms">#</doc-anchor-trigger>
+        <span>Forms</span>
+    </h1>
 </doc-anchor-target>
-<p>There&#x27;s just one more step before we actually get to building your first flutter project which is to understand the Dart language. You don&#x27;t necessarily need to know every minute detail of dart or any new language for that matter to get started. You only need enough to roughly understand the objective of code that you see.</p>
-<p>A good starting point for learning dart: <a href="https://codelabs.developers.google.com/codelabs/from-java-to-dart/">https://codelabs.developers.google.com/codelabs/from-java-to-dart/</a></p>
-<p>You can however complete additional codelabs if you want to, however it is not really necessary. <a href="https://dart.dev/codelabs">https://dart.dev/codelabs</a></p>
-<doc-anchor-target id="building-a-flutter-app">
-    <h2>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#building-a-flutter-app">#</doc-anchor-trigger>
-        <span>Building A Flutter App</span>
-    </h2>
+<p>Often, users will need to be able enter stuff into the app like username, password, their preferences etc. Users will need a text box to be able to type into. This is where forms come in place.</p>
+<p>Forms are a relatively easy and small topic, Take a loot at this <a href="https://docs.flutter.dev/cookbook/forms">cookbook</a> to use forms in your app.</p>
+<doc-anchor-target id="mini-assignment">
+    <h1>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#mini-assignment">#</doc-anchor-trigger>
+        <span>Mini Assignment</span>
+    </h1>
 </doc-anchor-target>
-<p>The exciting part is finally here! Let&#x27;s build our first app.</p>
-<p>Open up a terminal in VSCode and run the following command: <code v-pre>flutter create newsapp</code> You can change the name of the app to anything else you like but make sure to not have any capital letters in the name.</p>
-<p>As you can tell, the above command will create the necessary files for a flutter project. And yes, it does take a while to run the command.</p>
-<p>This command will already create a basic app created for you all packed into a single dart file in lib/main.dart .</p>
-<p>You can run the app by either using an emulator or plugging in your phone to your PC using your USB charging cable. Note that using an emulator will consume a significant amount of PC resources and is only recommended for systems with 16GB RAM. The Potato PCs can run their app using the USB cable.</p>
-<p>To use emulator: <a href="https://docs.flutter.dev/get-started/install/windows#set-up-the-android-emulator">https://docs.flutter.dev/get-started/install/windows#set-up-the-android-emulator</a></p>
-<p>To run on physical device: <a href="https://medium.com/@ferilukmansyah/easy-way-to-setup-your-android-device-to-run-flutter-project-28bddf0fa7f1">https://medium.com/@ferilukmansyah/easy-way-to-setup-your-android-device-to-run-flutter-project-28bddf0fa7f1</a></p>
-<doc-anchor-target id="next-steps">
-    <h2>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#next-steps">#</doc-anchor-trigger>
-        <span>Next Steps</span>
-    </h2>
-</doc-anchor-target>
-<p>We will be starting the Flutter track with Week 1 in July. In the meanwhile, enthusiastic folks can try and decipher the code in lib/main.dart of the project you just created. Do not get discouraged even if you understood absolutely nothing! Learning a new framework is a daunting task by itself and pair it up with a new language and congratulations, you just entered hell for a week or two (Yes, it doesn&#x27;t take too long to get comfortable with Flutter). I will begin Week 1 by explaining the code in main.dart before anything else. Stay Tuned!</p>
+<p>Create 2 routes. In the first route there will be a text widget and a floatingActionButton. On tapping the button, user will be navigated to the 2nd route where the user can type something in an input field and another button to go back which will take you back to the first route and and the text widget will display the text entered by the user.</p>
+<p>This mini-assignment is related to the assignment of this week so we recommend you do it.</p>
+<p>We will be releasing your assignment sometime in the next two days. This time however you will be building a complete app instead of something abstract like last time.</p>
 
                                 
                                 <!-- Required only on API pages -->
@@ -322,23 +284,16 @@
                             
                                 <nav class="flex mt-14">
                                     <div class="w-1/2">
-                                        <a class="px-5 py-4 h-full flex items-center break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-l-lg transition-colors duration-150 relative hover:z-5" href="../">
+                                        <a class="px-5 py-4 h-full flex items-center break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-r rounded-l-lg transition-colors duration-150 relative hover:z-5" href="../../week-2/module1/">
                                             <svg xmlns="http://www.w3.org/2000/svg" class="mr-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19 11H7.41l5.29-5.29a.996.996 0 10-1.41-1.41l-7 7a1 1 0 000 1.42l7 7a1.024 1.024 0 001.42-.01.996.996 0 000-1.41L7.41 13H19c.55 0 1-.45 1-1s-.45-1-1-1z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
                                             <span>
                                                 <span class="block text-xs font-normal text-gray-400 dark:text-dark-400">Previous</span>
-                                                <span class="block mt-1">About this SG</span>
+                                                <span class="block mt-1">Images, Assets and Packages</span>
                                             </span>
                                         </a>
                                     </div>
                             
                                     <div class="w-1/2">
-                                        <a class="px-5 py-4 -mx-px h-full flex items-center justify-end break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-r-lg transition-colors duration-150 relative hover:z-5" href="../week-1/">
-                                            <span>
-                                                <span class="block text-xs font-normal text-right text-gray-400 dark:text-dark-400">Next</span>
-                                                <span class="block mt-1">Week 1</span>
-                                            </span>
-                                            <svg xmlns="http://www.w3.org/2000/svg" class="ml-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19.92 12.38a1 1 0 00-.22-1.09l-7-7a.996.996 0 10-1.41 1.41l5.3 5.3H5c-.55 0-1 .45-1 1s.45 1 1 1h11.59l-5.29 5.29a.996.996 0 000 1.41c.19.2.44.3.7.3s.51-.1.71-.29l7-7c.09-.09.16-.21.21-.33z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
-                                        </a>
                                     </div>
                                 </nav>
                             </footer>
@@ -379,6 +334,6 @@
 
     <div id="docs-overlay-target"></div>
 
-    <script>window.__DOCS__ = { "title": "Installation And Introduction", level: 1, icon: "file", hasPrism: false, hasMermaid: false, hasMath: false }</script>
+    <script>window.__DOCS__ = { "title": "Navigation", level: 2, icon: "file", hasPrism: false, hasMermaid: false, hasMath: false }</script>
 </body>
 </html>
