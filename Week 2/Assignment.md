@@ -134,6 +134,6 @@ This assignment is slightly complicated for beginners but we don't expect you to
 
 The current deadline is 19th 11:59 PM. We might extend it if needed upon demand.
 
-The form to submit the assignment will be updated here soon.
+Form Link for submission: [Assignment 2 Form](https://forms.gle/LCowA4FsfAwSMDgz9)
 
 
