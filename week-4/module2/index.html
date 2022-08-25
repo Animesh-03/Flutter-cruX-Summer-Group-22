@@ -9,24 +9,24 @@
     <meta name="generator" content="Retype 2.4.0">
 
     <!-- Primary Meta Tags -->
-    <title>Assignment</title>
-    <meta name="title" content="Assignment">
-    <meta name="description" content="This week you will be building a fully functional Todo App with the following specifications:" />
+    <title>Firebase</title>
+    <meta name="title" content="Firebase">
+    <meta name="description" content="It's finally time to use the amazing features of firebase in your app!" />
 
     <!-- Canonical -->
-    <link rel="canonical" href="https://crux-flutter.live/week-2/assignment/" />
+    <link rel="canonical" href="https://crux-flutter.live/week-4/module2/" />
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://crux-flutter.live/week-2/assignment/">
-    <meta property="og:title" content="Assignment">
-    <meta property="og:description" content="This week you will be building a fully functional Todo App with the following specifications:">
+    <meta property="og:url" content="https://crux-flutter.live/week-4/module2/">
+    <meta property="og:title" content="Firebase">
+    <meta property="og:description" content="It's finally time to use the amazing features of firebase in your app!">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://crux-flutter.live/week-2/assignment/">
-    <meta property="twitter:title" content="Assignment">
-    <meta property="twitter:description" content="This week you will be building a fully functional Todo App with the following specifications:">
+    <meta property="twitter:url" content="https://crux-flutter.live/week-4/module2/">
+    <meta property="twitter:title" content="Firebase">
+    <meta property="twitter:description" content="It's finally time to use the amazing features of firebase in your app!">
 
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
@@ -230,160 +230,88 @@
                                 <div id="docs-sidebar-right-toggle"></div>
                 
                                 <!-- Page content  -->
-<doc-anchor-target id="assignment" class="break-words">
+<doc-anchor-target id="firebase" class="break-words">
     <h1>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#assignment">#</doc-anchor-trigger>
-        <span>Assignment</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#firebase">#</doc-anchor-trigger>
+        <span>Firebase</span>
     </h1>
 </doc-anchor-target>
-<p>This week you will be building a fully functional Todo App with the following specifications:</p>
-<ol>
-<li>Have a <code v-pre>Home</code> screen which displays all the todo items using a <code v-pre>ListView</code>(More on this later).</li>
-<li>Have floatingActionButton which navigates the user to an <code v-pre>AddItem</code> Screen.</li>
-<li>The Add item Screen should have the following:
-<ol>
-<li>Item title input field</li>
-<li>Item description input field</li>
-<li>Submit button</li>
-</ol>
-</li>
-<li>Upon tapping the submit button a new item should be added to the Home screen (preferably to the top of the list)</li>
-<li>Each item should be &quot;Slidable&quot;(More on this later) which reveals two actions:
-<ol>
-<li>Delete Item</li>
-<li>Complete Item</li>
-</ol>
-</li>
-<li>If an item is marked complete change its color to green or something suitable.</li>
-<li>When an item is pressed navigate the user to another page which has an app bar with the title being the Item&#x27;s title and the body of the page containing the Item&#x27;s description.</li>
-<li>Finally the list must be saved to the device using the shared_prefs(More on this later) package which allows the user to have persistent data.</li>
-</ol>
-<doc-anchor-target id="listview">
-    <h2>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#listview">#</doc-anchor-trigger>
-        <span>ListView</span>
-    </h2>
-</doc-anchor-target>
-<p>The <code v-pre>ListView</code> widget is an extremely useful and easy to use widget which helps you to handle a List of data. In our case we will have a <code v-pre>List&lt;TodoItem&gt;</code> which will have the necessary information to render onto our screen like the title, description, completed , etc.</p>
-<p>You can find the documentation of the widget <a href="https://api.flutter.dev/flutter/widgets/ListView-class.html">here</a>.</p>
-<p>Make sure you use the <code v-pre>ListView.builder()</code> method to render the list onto the screen.</p>
-<doc-anchor-target id="slidable">
-    <h2>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#slidable">#</doc-anchor-trigger>
-        <span>Slidable</span>
-    </h2>
-</doc-anchor-target>
-<p>This is a very cool widget which makes your app feel more modern. Upon sliding this widget, it reveals a drawer with <code v-pre>actions</code> you specify.</p>
-<p>Learn more about this widget <a href="https://pub.dev/packages/flutter_slidable">here</a>.</p>
-<p><a href="https://pub.dev/packages/flutter_slidable">Here&#x27;s</a> a quick tutorial on how to use the <code v-pre>Slidable</code> widget.</p>
-<doc-anchor-target id="shared-preferences">
-    <h2>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#shared-preferences">#</doc-anchor-trigger>
-        <span>Shared Preferences</span>
-    </h2>
-</doc-anchor-target>
-<p><a href="https://pub.dev/packages/shared_preferences">This</a> widget allows the app store data locally which can then be retrieved when the app starts again. This allows the todo items to be retrieved even after the app is closed.</p>
-<p>In simple terms you need to <a href="https://en.wikipedia.org/wiki/Serialization">Serialize</a> your <code v-pre>TodoItem</code> object to JSON which is then converted to a string and stored by the Shared Preferences Plugin.</p>
-<p>Serialization can be a difficult thing to grasp so <a href="https://stackoverflow.com/questions/61316208/how-to-save-listobject-to-sharedpreferences-in-flutter">here&#x27;s</a> an example as to how you can use the Shared Preferences Plugin to serialize and deserialize a List of objects.</p>
-<doc-anchor-target id="basic-project-outline">
-    <h2>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#basic-project-outline">#</doc-anchor-trigger>
-        <span>Basic Project Outline</span>
-    </h2>
-</doc-anchor-target>
-<p>Since you might not be familiar with OOP concepts which is necessary to write clean and manageable code, here&#x27;s a brief overview of what you should be doing:</p>
-<doc-panels>
-   <doc-panel id="todoitem-class">
-       <template #title>TodoItem Class</template>
+<p>It&#x27;s finally time to use the amazing features of firebase in your app!</p>
+<p>To get started head on to <a href="https://console.firebase.google.com">Firebase Console</a> and create a project. Give your project any name you want and google analytics part doesn&#x27;t really matter so keep it if you want to.</p>
+<p>After your project is created you will be taken to your project&#x27;s dashboard. Click on the Flutter Icon there and follow the steps like installing the CLI.</p>
+<p><strong>Note: The CLI tool might not work on some terminals like git bash so use the windows cmd prompt for the steps mentioned there.</strong></p>
+<p>You likely want to setup your project for just android and ios so select just those.</p>
+<p>You are now done connecting your firebase project to your flutter app.</p>
+<p>Call the following in the <code v-pre>main()</code> function before call the runApp function. Don&#x27;t forget to mark the main function to be <code v-pre>async</code>.</p>
 <div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-dart"><code v-pre class="language-dart">class TodoItem {
-  String title;
-  String description;
-  bool completed = false;
-  TodoItem({required this.title, required this.description});
-
-  factory TodoItem.fromJSON(String json) {
-    // Get TodoItem back from the json string
-    // You can split this function into two parts too if you want
-  }
-
-  static String toJSON(TodoItem item) {
-    // Convert TodoItem to a json string
-    // You can split this into two functions too
-  }
-
-  void complete()
-  {
-    // Mark the todoItem as completed
-    // Call it in the actions of Slidable widget
-  }
+<pre class="language-dart"><code v-pre class="language-dart">await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+);</code></pre>
+</doc-codeblock></div>
+<doc-anchor-target id="authentication">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#authentication">#</doc-anchor-trigger>
+        <span>Authentication</span>
+    </h2>
+</doc-anchor-target>
+<p>You now need a way to let users signup and login to use your chat application.</p>
+<p>To do this firebase provides a ton of different ways to enable users to login. Go the authentication Tab from the navbar on the right: Build-&gt;Authentication-&gt; Sign-In methods</p>
+<p>For the sake of explanation here I will be choosing the E-mail/password authentication but you are free to choose whatever you want, though the documentation for each will be different.</p>
+<doc-anchor-target id="email-authentication">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#email-authentication">#</doc-anchor-trigger>
+        <span>Email Authentication</span>
+    </h2>
+</doc-anchor-target>
+<p>Have a brief look at the documentation to understand how the email auth works: <a href="https://firebase.google.com/docs/auth/flutter/password-auth?hl=en">Docs</a></p>
+<p>This type of authentication needs two screens: one for signup and the other for login. Make sure to have a way to navigate between the 2 screens like &quot;Register here&quot; button in the login screen and &quot;Login here&quot; button in the register screen.</p>
+<p>As you can tell from the docs, you need two InputFields for the email and password and then pass it to a function that calls the respective firebase functions for signup and login.</p>
+<p>Once a user successfully registers you can see that this gets reflected in the Users tab of Authentication. Each user is assigned a random Unique ID aka UID by firebase.</p>
+<p>A cool thing that firebase does is that automatically stores the user that logged in last time in your local storage. This user can the be accessed with</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-dart"><code v-pre class="language-dart">dynamic user = await FirebaseAuth.instance.currentUser</code></pre>
+</doc-codeblock></div>
+<p>The current user is <code v-pre>null</code> when there is no user that is signed in.</p>
+<doc-anchor-target id="authentication-wrapper">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#authentication-wrapper">#</doc-anchor-trigger>
+        <span>Authentication Wrapper</span>
+    </h2>
+</doc-anchor-target>
+<p>Create a Widget called <code v-pre>AuthWrapper</code> which is the first widget that will be called after the <code v-pre>MaterialApp</code>.</p>
+<p>This widget will check if there is a user that is logged in currently and pass him to the chat screen if yes, else pass him to the login screen.</p>
+<p>You can check for the user by using another function that firebase provides called <code v-pre>authStateChanges()</code>. This function returns a stream which contains the data on the user.</p>
+<p>You can use the <code v-pre>StreamBuilder</code> widget which takes in the stream and uses it to rebuild the widget if there is a change to the stream.</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-dart"><code v-pre class="language-dart">Widget build(BuildContext context) {
+    return StreamBuilder&lt;User?&gt;(
+        stream: FirebaseAuth.instance.authStateChanges(),
+        builder: (context, snapshot) {
+          if (snapshot.hasData) {
+            // Return the Chat Screen Widget
+          } else {
+            // Return the Login Widget
+          }
+        });
+  }</code></pre>
+</doc-codeblock></div>
+<p>You can have some other static functions inside this widget that are concerned with authentication like a <code v-pre>signOut()</code> function which clears the <code v-pre>currentUser</code>.</p>
+<doc-anchor-target id="intro-to-firestore">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#intro-to-firestore">#</doc-anchor-trigger>
+        <span>Intro to Firestore</span>
+    </h2>
+</doc-anchor-target>
+<p>You need some way to let the user pick his own username but the signIn function that firebase provides has no such option. Hence you need to map the UID that firebase generates to a username that a user can pick. So now you need to have 3 Input fields in the signup Screen.</p>
+<p>After a user is created successfully (without any exceptions) you need to get the UID that is generated and map to his username with something like this using JSON</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-dart"><code v-pre class="language-dart">{
+    [uid]: username
 }</code></pre>
 </doc-codeblock></div>
-   </doc-panel>
-   <doc-panel id="home-class">
-       <template #title>Home Class</template>
-<div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-dart"><code v-pre class="language-dart">class Home extends StatefulWidget {
-  Home({Key? key}) : super(key: key);
-
-  @override
-  State&lt;Home&gt; createState() =&gt; _HomeState();
-}
-
-class _HomeState extends State&lt;Home&gt; {
-  late List&lt;TodoItem&gt; list;
-
-// initState() runs the first time when the widget is loaded
-  @override
-  void initState() {
-    super.initState();
-    // Get your TodoItem list from your shared prefs package using the function in the TodoItem class
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    return (
-        // The rest of the widget tree
-
-        ListTile(
-      // Other parts of the code
-            onTap: () {
-                // Navigate to the display item screen and pass the TodoItem into the route
-        },
-      ),
-    );
-  }
-}</code></pre>
-</doc-codeblock></div>
-   </doc-panel>
-   <doc-panel id="display-item">
-       <template #title>Display Item</template>
-<div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-dart"><code v-pre class="language-dart">class DisplayItem extends StatelessWidget {
-  const DisplayItem({Key? key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    // Get the todoItem passed to the route
-
-    return (
-      // Display whatever was metioned in the requirements
-    );
-  }
-}</code></pre>
-</doc-codeblock></div>
-   </doc-panel>
-</doc-panels>
-<p>The add item page should be pretty simple so we leave that to you.</p>
-<doc-anchor-target id="submission-guidelines">
-    <h2>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#submission-guidelines">#</doc-anchor-trigger>
-        <span>Submission Guidelines</span>
-    </h2>
-</doc-anchor-target>
-<p>This assignment is slightly complicated for beginners but we don&#x27;t expect you to do everything without any bugs. You can submit whatever you have done. Feel free to contact us in case of any difficulties or clarifications.</p>
-<p>The current deadline is 19th 11:59 PM. We might extend it if needed upon demand.</p>
-<p>Form Link for submission: <a href="https://forms.gle/LCowA4FsfAwSMDgz9">Assignment 2 Form</a></p>
+<p>Now that you are done with mapping you need to store this somewhere on firebase.</p>
+<p>Firestore is the database that firebase provides which is a collection-document based database. To learn more about how that works take a look at this: <a href="https://www.youtube.com/watch?v=lW7DWV2jST0">Firestore Data Modelling</a></p>
+<p>We will proceed with how to use firestore in the next module.</p>
 
                                 
                                 <!-- Required only on API pages -->
@@ -393,20 +321,20 @@ class _HomeState extends State&lt;Home&gt; {
                             
                                 <nav class="flex mt-14">
                                     <div class="w-1/2">
-                                        <a class="px-5 py-4 h-full flex items-center break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-l-lg transition-colors duration-150 relative hover:z-5" href="../../week-2/module2/">
+                                        <a class="px-5 py-4 h-full flex items-center break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-l-lg transition-colors duration-150 relative hover:z-5" href="../../week-3/assignment/">
                                             <svg xmlns="http://www.w3.org/2000/svg" class="mr-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19 11H7.41l5.29-5.29a.996.996 0 10-1.41-1.41l-7 7a1 1 0 000 1.42l7 7a1.024 1.024 0 001.42-.01.996.996 0 000-1.41L7.41 13H19c.55 0 1-.45 1-1s-.45-1-1-1z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
                                             <span>
                                                 <span class="block text-xs font-normal text-gray-400 dark:text-dark-400">Previous</span>
-                                                <span class="block mt-1">Navigation</span>
+                                                <span class="block mt-1">Assignment</span>
                                             </span>
                                         </a>
                                     </div>
                             
                                     <div class="w-1/2">
-                                        <a class="px-5 py-4 -mx-px h-full flex items-center justify-end break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-r-lg transition-colors duration-150 relative hover:z-5" href="../../week-3/module1/">
+                                        <a class="px-5 py-4 -mx-px h-full flex items-center justify-end break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-r-lg transition-colors duration-150 relative hover:z-5" href="../../assignment/">
                                             <span>
                                                 <span class="block text-xs font-normal text-right text-gray-400 dark:text-dark-400">Next</span>
-                                                <span class="block mt-1">HTTP Package-​Working with AP​Is</span>
+                                                <span class="block mt-1">Final Assignment</span>
                                             </span>
                                             <svg xmlns="http://www.w3.org/2000/svg" class="ml-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19.92 12.38a1 1 0 00-.22-1.09l-7-7a.996.996 0 10-1.41 1.41l5.3 5.3H5c-.55 0-1 .45-1 1s.45 1 1 1h11.59l-5.29 5.29a.996.996 0 000 1.41c.19.2.44.3.7.3s.51-.1.71-.29l7-7c.09-.09.16-.21.21-.33z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
                                         </a>
@@ -450,6 +378,6 @@ class _HomeState extends State&lt;Home&gt; {
 
     <div id="docs-overlay-target"></div>
 
-    <script>window.__DOCS__ = { "title": "Assignment", level: 2, icon: "file", hasPrism: true, hasMermaid: false, hasMath: false }</script>
+    <script>window.__DOCS__ = { "title": "Firebase and Authentication", level: 2, icon: "file", hasPrism: true, hasMermaid: false, hasMath: false }</script>
 </body>
 </html>
