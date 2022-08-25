@@ -29,8 +29,7 @@ You can add hardcoded dummy messages as well, just to test your UI.
 
 - Make your messages right aligned, and others' left aligned.
 - Give every sender a random colour for every message bubble. Normally, colours are fixed for every user, but we shall do that when we add logic to receive messages.
-- Implement dark mode, with a button in the AppBar to switch between modes. Look into theming for Flutter apps.
-  !
+- Implement dark mode, with a button in the AppBar to switch between modes. Look into theming for Flutter apps.cr
  
 ## Part 2
 
