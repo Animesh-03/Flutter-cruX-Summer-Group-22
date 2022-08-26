@@ -1,3 +1,8 @@
+---
+label: Firestore
+order: 95
+---
+
 # Firestore
 
 The video attached in the last module should have given you a fair idea about NoSQL databases and the collection-document structure used in firebase. If you haven't watched it yet then please do.
