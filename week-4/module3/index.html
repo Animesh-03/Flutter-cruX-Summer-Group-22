@@ -9,24 +9,24 @@
     <meta name="generator" content="Retype 2.4.0">
 
     <!-- Primary Meta Tags -->
-    <title>Firebase</title>
-    <meta name="title" content="Firebase">
-    <meta name="description" content="It's finally time to use the amazing features of firebase in your app!" />
+    <title>Firestore</title>
+    <meta name="title" content="Firestore">
+    <meta name="description" content="The video attached in the last module should have given you a fair idea about NoSQL databases and the collection-document structure used in firebase." />
 
     <!-- Canonical -->
-    <link rel="canonical" href="https://crux-flutter.live/week-4/module2/" />
+    <link rel="canonical" href="https://crux-flutter.live/week-4/module3/" />
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://crux-flutter.live/week-4/module2/">
-    <meta property="og:title" content="Firebase">
-    <meta property="og:description" content="It's finally time to use the amazing features of firebase in your app!">
+    <meta property="og:url" content="https://crux-flutter.live/week-4/module3/">
+    <meta property="og:title" content="Firestore">
+    <meta property="og:description" content="The video attached in the last module should have given you a fair idea about NoSQL databases and the collection-document structure used in firebase.">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://crux-flutter.live/week-4/module2/">
-    <meta property="twitter:title" content="Firebase">
-    <meta property="twitter:description" content="It's finally time to use the amazing features of firebase in your app!">
+    <meta property="twitter:url" content="https://crux-flutter.live/week-4/module3/">
+    <meta property="twitter:title" content="Firestore">
+    <meta property="twitter:description" content="The video attached in the last module should have given you a fair idea about NoSQL databases and the collection-document structure used in firebase.">
 
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
@@ -230,88 +230,136 @@
                                 <div id="docs-sidebar-right-toggle"></div>
                 
                                 <!-- Page content  -->
-<doc-anchor-target id="firebase" class="break-words">
+<doc-anchor-target id="firestore" class="break-words">
     <h1>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#firebase">#</doc-anchor-trigger>
-        <span>Firebase</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#firestore">#</doc-anchor-trigger>
+        <span>Firestore</span>
     </h1>
 </doc-anchor-target>
-<p>It&#x27;s finally time to use the amazing features of firebase in your app!</p>
-<p>To get started head on to <a href="https://console.firebase.google.com">Firebase Console</a> and create a project. Give your project any name you want and google analytics part doesn&#x27;t really matter so keep it if you want to.</p>
-<p>After your project is created you will be taken to your project&#x27;s dashboard. Click on the Flutter Icon there and follow the steps like installing the CLI.</p>
-<p><strong>Note: The CLI tool might not work on some terminals like git bash so use the windows cmd prompt for the steps mentioned there.</strong></p>
-<p>You likely want to setup your project for just android and ios so select just those.</p>
-<p>You are now done connecting your firebase project to your flutter app.</p>
-<p>Call the following in the <code v-pre>main()</code> function before call the runApp function. Don&#x27;t forget to mark the main function to be <code v-pre>async</code>.</p>
+<p>The video attached in the last module should have given you a fair idea about NoSQL databases and the collection-document structure used in firebase. If you haven&#x27;t watched it yet then please do.</p>
+<p>Firestore in our project has a pretty similar function to shared_prefs package you used to store TodoItem but as an added bonus Firestore is hosted on the internet as opposed to the local storage on a device. This allows all the users of your app to gain access to the database.</p>
+<doc-anchor-target id="using-firestore">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#using-firestore">#</doc-anchor-trigger>
+        <span>Using Firestore</span>
+    </h2>
+</doc-anchor-target>
+<p>Firestore Docs: <a href="https://firebase.google.com/docs/firestore/query-data/get-data">Docs</a></p>
+<p>You can see the various functions that firebase can provide in the left navbar.</p>
+<p>Go to the project you created in <a href="https://console.firebase.google.com">Firebase Console</a>.</p>
+<p>Then Build-&gt;Firestore-&gt; Create Database -&gt; Start in Test Mode.</p>
+<p>Now create a collection called users. This collection will store the user information in the form of documents.</p>
+<p>For easy access of a particular user we will name the document to be the uid.</p>
+<p>In each document which represents the user info we will store the following:</p>
+<ul>
+<li>firebase uid</li>
+<li>username</li>
+</ul>
+<doc-anchor-target id="adding-data">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#adding-data">#</doc-anchor-trigger>
+        <span>Adding Data</span>
+    </h3>
+</doc-anchor-target>
+<p>We first need to get a reference of firestore database.</p>
 <div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-dart"><code v-pre class="language-dart">await Firebase.initializeApp(
-    options: DefaultFirebaseOptions.currentPlatform,
-);</code></pre>
+<pre class="language-dart"><code v-pre class="language-dart">final db = FirebaseFirestore.instance;</code></pre>
 </doc-codeblock></div>
-<doc-anchor-target id="authentication">
-    <h2>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#authentication">#</doc-anchor-trigger>
-        <span>Authentication</span>
-    </h2>
-</doc-anchor-target>
-<p>You now need a way to let users signup and login to use your chat application.</p>
-<p>To do this firebase provides a ton of different ways to enable users to login. Go the authentication Tab from the navbar on the right: Build-&gt;Authentication-&gt; Sign-In methods</p>
-<p>For the sake of explanation here I will be choosing the E-mail/password authentication but you are free to choose whatever you want, though the documentation for each will be different.</p>
-<doc-anchor-target id="email-authentication">
-    <h2>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#email-authentication">#</doc-anchor-trigger>
-        <span>Email Authentication</span>
-    </h2>
-</doc-anchor-target>
-<p>Have a brief look at the documentation to understand how the email auth works: <a href="https://firebase.google.com/docs/auth/flutter/password-auth?hl=en">Docs</a></p>
-<p>This type of authentication needs two screens: one for signup and the other for login. Make sure to have a way to navigate between the 2 screens like &quot;Register here&quot; button in the login screen and &quot;Login here&quot; button in the register screen.</p>
-<p>As you can tell from the docs, you need two InputFields for the email and password and then pass it to a function that calls the respective firebase functions for signup and login.</p>
-<p>Once a user successfully registers you can see that this gets reflected in the Users tab of Authentication. Each user is assigned a random Unique ID aka UID by firebase.</p>
-<p>A cool thing that firebase does is that automatically stores the user that logged in last time in your local storage. This user can the be accessed with</p>
+<p>The <code v-pre>db</code> variable now references our database that we created in firebase console.</p>
+<p>Now let the userInfo that we want to add to firebase be a <code v-pre>JSON</code> or a <code v-pre>Map&lt;String, dynamic&gt;</code> in dart terms.</p>
 <div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-dart"><code v-pre class="language-dart">dynamic user = await FirebaseAuth.instance.currentUser</code></pre>
-</doc-codeblock></div>
-<p>The current user is <code v-pre>null</code> when there is no user that is signed in.</p>
-<doc-anchor-target id="authentication-wrapper">
-    <h2>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#authentication-wrapper">#</doc-anchor-trigger>
-        <span>Authentication Wrapper</span>
-    </h2>
-</doc-anchor-target>
-<p>Create a Widget called <code v-pre>AuthWrapper</code> which is the first widget that will be called after the <code v-pre>MaterialApp</code>.</p>
-<p>This widget will check if there is a user that is logged in currently and pass him to the chat screen if yes, else pass him to the login screen.</p>
-<p>You can check for the user by using another function that firebase provides called <code v-pre>authStateChanges()</code>. This function returns a stream which contains the data on the user.</p>
-<p>You can use the <code v-pre>StreamBuilder</code> widget which takes in the stream and uses it to rebuild the widget if there is a change to the stream.</p>
-<div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-dart"><code v-pre class="language-dart">Widget build(BuildContext context) {
-    return StreamBuilder&lt;User?&gt;(
-        stream: FirebaseAuth.instance.authStateChanges(),
-        builder: (context, snapshot) {
-          if (snapshot.hasData) {
-            // Return the Chat Screen Widget
-          } else {
-            // Return the Login Widget
-          }
-        });
-  }</code></pre>
-</doc-codeblock></div>
-<p>You can have some other static functions inside this widget that are concerned with authentication like a <code v-pre>signOut()</code> function which clears the <code v-pre>currentUser</code>.</p>
-<doc-anchor-target id="intro-to-firestore">
-    <h2>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#intro-to-firestore">#</doc-anchor-trigger>
-        <span>Intro to Firestore</span>
-    </h2>
-</doc-anchor-target>
-<p>You need some way to let the user pick his own username but the signIn function that firebase provides has no such option. Hence you need to map the UID that firebase generates to a username that a user can pick. So now you need to have 3 Input fields in the signup Screen.</p>
-<p>After a user is created successfully (without any exceptions) you need to get the UID that is generated and map to his username with something like this using JSON</p>
-<div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-dart"><code v-pre class="language-dart">{
-    [uid]: username
+<pre class="language-dart"><code v-pre class="language-dart">final uid = await FirebaseAuth.instance.currentUser.uid
+final userInfo = &lt;String, dynamic&gt;{
+    &quot;uid&quot;: uid
+    &quot;username&quot;: username // Get from input field
 }</code></pre>
 </doc-codeblock></div>
-<p>Now that you are done with mapping you need to store this somewhere on firebase.</p>
-<p>Firestore is the database that firebase provides which is a collection-document based database. To learn more about how that works take a look at this: <a href="https://www.youtube.com/watch?v=lW7DWV2jST0">Firestore Data Modelling</a></p>
-<p>We will proceed with how to use firestore in the next module.</p>
+<p>To add this data to firebase as a <strong>new</strong> document:</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-dart"><code v-pre class="language-dart">final db = FirebaseFirestore.instance;
+final uid = await FirebaseAuth.instance.currentUser.uid;
+
+final userInfo = &lt;String, dynamic&gt;{
+    &quot;uid&quot;: uid // uid = FirebaseAuth.instance.currentUser
+    &quot;username&quot;: username // Get from input field
+}
+
+await db.collection(&quot;users&quot;).doc(uid).set(userInfo);</code></pre>
+</doc-codeblock></div>
+<p>The above code will create a new document with the name <code v-pre>uid</code> and then set the contents of the document to the <code v-pre>userInfo</code> map. Note that most of the firestore functions are asynchronous so it&#x27;s advisable to wrap it in a try-catch block.</p>
+<p><strong>Note: If a document with the name <code v-pre>uid</code> already exists then a new document is not created and the contents of the existing document are over-written.</strong></p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-dart"><code v-pre class="language-dart">try{
+    // Firebase Stuff
+}
+catch(e){
+    // Do something with the error
+}</code></pre>
+</doc-codeblock></div>
+<p>You can read more about adding data to firestore <a href="https://firebase.google.com/docs/firestore/manage-data/add-data">here</a></p>
+<doc-anchor-target id="reading-data-from-firestore">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#reading-data-from-firestore">#</doc-anchor-trigger>
+        <span>Reading data from firestore</span>
+    </h3>
+</doc-anchor-target>
+<p>There are 2 ways to read data from firestore</p>
+<ul>
+<li>Read once</li>
+<li>Listen for updates</li>
+</ul>
+<p>You need to select the appropriate method to read data depending on your use case.</p>
+<p>Let&#x27;s say you want to get the username of the user. Since the username doesn&#x27;t keep updating regularly you only need to read it once from the database and store it somewhere in memory(a variable).</p>
+<p>To read data once:</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-dart"><code v-pre class="language-dart">final db = FirebaseFirestore.instance;
+final uid = await FirebaseAuth.instance.currentUser.uid;
+
+final userInfo = await db.collection(&quot;users&quot;).doc(uid).get().data() as Map&lt;String, dynamic&gt;;
+
+final username = userInfo[&quot;username&quot;];</code></pre>
+</doc-codeblock></div>
+<p>To read more on how to get data once see <a href="https://firebase.google.com/docs/firestore/query-data/get-data">this</a></p>
+<p>The documentation uses the <code v-pre>.then()</code> methods to deal with <code v-pre>async</code> codes which is perfectly fine to do. You can also use <code v-pre>async-await</code> as I do in the module.</p>
+<p>Now our chat application needs to be realtime i.e, if a user sends a message then it gets added to firestore. This message should also need to be updated in the app of other users as soon as possible. To accomplish we need to listen for changes in the database in our app.</p>
+<p>Let&#x27;s say our chat messages are stored in a collection called <code v-pre>chat</code> and each document in the collection represents one message.</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-dart"><code v-pre class="language-dart">final db = FirebaseFirestore.instance;
+
+final chatStream = db.collection(&quot;chat&quot;).snapshots();</code></pre>
+</doc-codeblock></div>
+<p>As you can tell we get a <code v-pre>Stream</code>. This stream can be used to build our chat screen using the <code v-pre>StreamBuilder</code> widget.</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-dart"><code v-pre class="language-dart">final db = FirebaseFirestore.instance;
+
+final chatStream = db.collection(&quot;chat&quot;).snapshots();
+
+Widget chatMessages() {
+    return StreamBuilder&lt;QuerySnapshot&gt;(
+        stream: chatStream,
+        builder: (BuildContext context, AsyncSnapshot&lt;QuerySnapshot&gt; snapshot) {
+            // Do stuff with your snapshot
+        }
+    )
+}</code></pre>
+</doc-codeblock></div>
+<p>The snapshot has many methods and properties but we are concerned about getting the documents in the collection.</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-dart"><code v-pre class="language-dart">final chatDocs = snapshot.data!.docs;// This is a List of documents
+//To access the data of a specific document say the first one
+final firstDocData = chatDocs[0].data() as Map&lt;String, dynamic&gt;;</code></pre>
+</doc-codeblock></div>
+<p>To read more on listening for updates: <a href="https://firebase.google.com/docs/firestore/query-data/listen">Docs</a></p>
+<doc-anchor-target id="querying-data">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#querying-data">#</doc-anchor-trigger>
+        <span>Querying Data</span>
+    </h3>
+</doc-anchor-target>
+<p>You might want to get a specific document from firestore instead of an entire collection. To do this you need to query firestore.</p>
+<p>Fortunately the documentation does a much better job at explaining than me so here you go: <a href="https://firebase.google.com/docs/firestore/query-data/queries">Docs</a></p>
+<p>You need to query data wherever possible to get the least amount of docs as possible onto your app. Say a collection has a million documents with 100kB data each. This would mean that that your app has to download 100GB when you just want to get a single document.</p>
+<p>Another issue with getting the entire collection is that you give the app unnessary data along with the useful data. Let&#x27;s assume that a users collection has documents corresponding to each user and has the password of the user in the document. If you fetch the entire collection then that means the app has access to every account in your database.</p>
 
                                 
                                 <!-- Required only on API pages -->
@@ -321,20 +369,20 @@
                             
                                 <nav class="flex mt-14">
                                     <div class="w-1/2">
-                                        <a class="px-5 py-4 h-full flex items-center break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-l-lg transition-colors duration-150 relative hover:z-5" href="../../week-3/assignment/">
+                                        <a class="px-5 py-4 h-full flex items-center break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-l-lg transition-colors duration-150 relative hover:z-5" href="../../week-4/module2/">
                                             <svg xmlns="http://www.w3.org/2000/svg" class="mr-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19 11H7.41l5.29-5.29a.996.996 0 10-1.41-1.41l-7 7a1 1 0 000 1.42l7 7a1.024 1.024 0 001.42-.01.996.996 0 000-1.41L7.41 13H19c.55 0 1-.45 1-1s-.45-1-1-1z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
                                             <span>
                                                 <span class="block text-xs font-normal text-gray-400 dark:text-dark-400">Previous</span>
-                                                <span class="block mt-1">Assignment</span>
+                                                <span class="block mt-1">Firebase and Authentication</span>
                                             </span>
                                         </a>
                                     </div>
                             
                                     <div class="w-1/2">
-                                        <a class="px-5 py-4 -mx-px h-full flex items-center justify-end break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-r-lg transition-colors duration-150 relative hover:z-5" href="../../week-4/module3/">
+                                        <a class="px-5 py-4 -mx-px h-full flex items-center justify-end break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-r-lg transition-colors duration-150 relative hover:z-5" href="../../assignment/">
                                             <span>
                                                 <span class="block text-xs font-normal text-right text-gray-400 dark:text-dark-400">Next</span>
-                                                <span class="block mt-1">Firestore</span>
+                                                <span class="block mt-1">Final Assignment</span>
                                             </span>
                                             <svg xmlns="http://www.w3.org/2000/svg" class="ml-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19.92 12.38a1 1 0 00-.22-1.09l-7-7a.996.996 0 10-1.41 1.41l5.3 5.3H5c-.55 0-1 .45-1 1s.45 1 1 1h11.59l-5.29 5.29a.996.996 0 000 1.41c.19.2.44.3.7.3s.51-.1.71-.29l7-7c.09-.09.16-.21.21-.33z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
                                         </a>
@@ -378,6 +426,6 @@
 
     <div id="docs-overlay-target"></div>
 
-    <script>window.__DOCS__ = { "title": "Firebase and Authentication", level: 2, icon: "file", hasPrism: true, hasMermaid: false, hasMath: false }</script>
+    <script>window.__DOCS__ = { "title": "Firestore", level: 2, icon: "file", hasPrism: true, hasMermaid: false, hasMath: false }</script>
 </body>
 </html>

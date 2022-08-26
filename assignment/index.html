@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.714739576357">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.714835604357">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 2.4.0">
@@ -31,11 +31,11 @@
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
     <link href="../static/favicon.png" rel="icon" />
-    <link href="../resources/css/retype.css?v=2.4.0.714739576357" rel="stylesheet" />
+    <link href="../resources/css/retype.css?v=2.4.0.714835604357" rel="stylesheet" />
 
-    <script type="text/javascript" src="../resources/js/config.js?v=2.4.0.714739576357" data-turbo-eval="false" defer></script>
+    <script type="text/javascript" src="../resources/js/config.js?v=2.4.0.714835604357" data-turbo-eval="false" defer></script>
     <script type="text/javascript" src="../resources/js/retype.js?v=2.4.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" type="text/javascript" src="../resources/js/lunr.js?v=2.4.0.714739576357" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" type="text/javascript" src="../resources/js/lunr.js?v=2.4.0.714835604357" data-turbo-eval="false" defer></script>
 
     <style>
       .c {
@@ -321,6 +321,38 @@ Make sure to catch any errors and deal with them appropriately.</p>
 <p>Make an AuthWrapper Widget as described in the Firebase Module in Week 4 and add a static function to signout.</p>
 <p>Add a signout button in the chat screen which calls the static funcion in AuthWrapper when pressed.</p>
 <p>The Login Screen must have a button that calls the login logic in firebase.</p>
+<doc-anchor-target id="part-3">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#part-3">#</doc-anchor-trigger>
+        <span>Part 3</span>
+    </h2>
+</doc-anchor-target>
+<doc-anchor-target id="design-1">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#design-1">#</doc-anchor-trigger>
+        <span>Design</span>
+    </h3>
+</doc-anchor-target>
+<p>There are 2 things that you store in firebase for your chat application:</p>
+<ul>
+<li>Usernames of users</li>
+<li>Chat messages</li>
+</ul>
+<p>Hence create a collections for each of the above.</p>
+<p>Storing usernames is a fairly simple task. You already have the uid that firebase generates on registration of a user. You need to map this uid to the username that a user inputs on registration.</p>
+<p>Use the function that you created in Part 2 which is called when registration is successful to store the username.</p>
+<p>Storing chat messages is a slightly more complex task but easy nonetheless.
+Each chat message must have the parameters mentioned above i.e, username of the person who sent the message, the message, the time the message is sent.</p>
+<p>It is advised to have a separate class for storing each chat message similar to what you did for assignment-2.</p>
+<doc-anchor-target id="functionality-2">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#functionality-2">#</doc-anchor-trigger>
+        <span>Functionality</span>
+    </h3>
+</doc-anchor-target>
+<p>When the users of the app sends a message then convert it into <code v-pre>JSON (Map&lt;String,dynamic&gt;)</code> storing the username of the user instead of the uid. Add this message to a separate document in your collection.</p>
+<p>Listen for changes to your collection where the chat messages are stored and update them in your app. Make sure to order the documents by the sent-time of each message.</p>
+<p>Also check if the sender of each message is you or someone else and display it accordingly.</p>
 
                                 
                                 <!-- Required only on API pages -->
@@ -330,11 +362,11 @@ Make sure to catch any errors and deal with them appropriately.</p>
                             
                                 <nav class="flex mt-14">
                                     <div class="w-1/2">
-                                        <a class="px-5 py-4 h-full flex items-center break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-r rounded-l-lg transition-colors duration-150 relative hover:z-5" href="../week-4/module2/">
+                                        <a class="px-5 py-4 h-full flex items-center break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-r rounded-l-lg transition-colors duration-150 relative hover:z-5" href="../week-4/module3/">
                                             <svg xmlns="http://www.w3.org/2000/svg" class="mr-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19 11H7.41l5.29-5.29a.996.996 0 10-1.41-1.41l-7 7a1 1 0 000 1.42l7 7a1.024 1.024 0 001.42-.01.996.996 0 000-1.41L7.41 13H19c.55 0 1-.45 1-1s-.45-1-1-1z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
                                             <span>
                                                 <span class="block text-xs font-normal text-gray-400 dark:text-dark-400">Previous</span>
-                                                <span class="block mt-1">Firebase and Authentication</span>
+                                                <span class="block mt-1">Firestore</span>
                                             </span>
                                         </a>
                                     </div>
