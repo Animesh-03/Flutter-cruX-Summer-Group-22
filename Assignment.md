@@ -58,3 +58,30 @@ Make an AuthWrapper Widget as described in the Firebase Module in Week 4 and add
 Add a signout button in the chat screen which calls the static funcion in AuthWrapper when pressed.
 
 The Login Screen must have a button that calls the login logic in firebase.
+
+## Part 3
+
+### Design
+
+There are 2 things that you store in firebase for your chat application:
+- Usernames of users
+- Chat messages
+
+Hence create a collections for each of the above.
+
+Storing usernames is a fairly simple task. You already have the uid that firebase generates on registration of a user. You need to map this uid to the username that a user inputs on registration.
+
+Use the function that you created in Part 2 which is called when registration is successful to store the username.
+
+Storing chat messages is a slightly more complex task but easy nonetheless.
+Each chat message must have the parameters mentioned above i.e, username of the person who sent the message, the message, the time the message is sent.
+
+It is advised to have a separate class for storing each chat message similar to what you did for assignment-2.
+
+### Functionality
+
+When the users of the app sends a message then convert it into `JSON (Map<String,dynamic>)` storing the username of the user instead of the uid. Add this message to a separate document in your collection.
+
+Listen for changes to your collection where the chat messages are stored and update them in your app. Make sure to order the documents by the sent-time of each message.
+
+Also check if the sender of each message is you or someone else and display it accordingly.
